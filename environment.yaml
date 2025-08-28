@@ -1,0 +1,35 @@
+name: vision2time
+channels:
+  - pytorch
+  - huggingface
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Python
+  - python=3.9
+
+  # Core ML libraries
+  - pytorch>=1.12.0
+  - torchvision
+  - numpy
+  - scikit-learn
+  - pandas
+
+  # Time series
+  - pip
+  - pip:
+    - sktime
+    - aeon
+    - transformers>=4.20.0
+
+  # Visualization and analysis
+  - matplotlib
+  - seaborn
+
+  # Development tools
+  - jupyter
+  - ipykernel
+
+  # Optional: CUDA support (uncomment if using GPU)
+  # - pytorch-cuda=11.7
